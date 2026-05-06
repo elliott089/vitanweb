@@ -175,9 +175,8 @@ main {
 
 .about-content {
     width: min(42%, 520px);
-    margin: 40px auto 0 18%;
+    margin: 40px auto;       /* centers the box */
     text-align: left;
-    margin-right: 660px;
 }
 
 @media (max-width: 768px) {
