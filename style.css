@@ -177,6 +177,7 @@ main {
     width: min(42%, 520px);
     margin: 40px 18% 0 auto;
     text-align: left;
+    margin-left: 0;
 }
 
 @media (max-width: 768px) {
