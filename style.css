@@ -470,4 +470,13 @@ footer {
     transform: translateY(-2px);
 }
 
+.aron-img {
+    width: 160px;     
+    height: auto;
+    border-radius: 12px;
+    display: block;
+    margin: 0 auto;      /* centers it */
+    box-shadow: 0 0 18px rgba(219, 56, 56, 0.35);
+}
+
 
