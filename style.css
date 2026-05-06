@@ -177,7 +177,7 @@ main {
     width: min(42%, 520px);
     margin: 40px 18% 0 auto;
     text-align: left;
-    margin-left: 0;
+    margin-left: 660px;
 }
 
 @media (max-width: 768px) {
@@ -327,6 +327,10 @@ footer {
         margin-left: 0;
     }
 
+    main {
+        text-align: center;
+    }
+
     .title {
         font-size: 2.5rem;
     }
@@ -388,4 +392,6 @@ footer {
         font-size: 1.1rem;
     }
 }
+
+
 
