@@ -175,9 +175,9 @@ main {
 
 .about-content {
     width: min(42%, 520px);
-    margin: 40px 18% 0 auto;
+    margin: 40px auto 0 18%;
     text-align: left;
-    margin-left: 1000px;
+    margin-right: 660px;
 }
 
 @media (max-width: 768px) {
