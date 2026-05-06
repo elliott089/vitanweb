@@ -175,7 +175,7 @@ main {
 
 .about-content {
     width: min(42%, 520px);
-    margin: 40px auto;       /* centers the box */
+    margin: 70px auto;    
     text-align: left;
 }
 
