@@ -17,12 +17,30 @@ body {
         #ff5858 20px,
         #ff5858 40px
     );
+.moving-bg {
+    position: fixed;
+    inset: 0;
+    z-index: -999;
+    background: repeating-linear-gradient(
+        -45deg,
+        #dc4242 0px,
+        #dc4242 20px,
+        #ff5858 20px,
+        #ff5858 40px
+    );
+    background-size: 40px 40px;
+    animation: moveStripes 20s linear infinite;
+    will-change: background-position;
+    transform: translateZ(0); /* Force GPU acceleration */
 }
 .play-btn {
     margin-left: 820px; /* adjust this number until it looks perfect */
 }
 
-
+@keyframes moveStripes {
+    0% { background-position: 0 0; }
+    100% { background-position: 40px 40px; }
+    
 .bg-stripes {
     position: fixed;
     inset: 0;
