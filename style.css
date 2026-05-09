@@ -38,7 +38,8 @@ body {
     100% { background-position: 40px 40px; }
 }
 .play-btn {
-    margin-left: 820px; /* adjust this number until it looks perfect */
+    display: inline-block;
+    margin: 40px auto 0;
 }
 
 
@@ -48,8 +49,29 @@ body {
     z-index: -1;
 }
 
+.unit-sticker,
 .noob-sticker,
+.aron-sticker {
+    position: fixed !important;
+    pointer-events: none;
+}
+
 .unit-sticker {
+    right: 6% !important;
+}
+
+.noob-sticker {
+    left: 6% !important;
+}
+
+.aron-sticker {
+    right: 12% !important;
+    top: 40% !important;
+}
+
+.noob-sticker,
+.unit-sticker,
+.aron-sticker {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
@@ -65,11 +87,18 @@ body {
     right: 6%;
 }
 
+.aron-sticker {
+    right: 12%;
+    top: 40%;
+}
+
 .noob-sticker img,
-.unit-sticker img {
+.unit-sticker img,
+.aron-sticker img {
     display: block;
     max-height: 90vh;
     width: auto;
+    object-fit: contain;
 }
 
 /* ===== HEADER ===== */
@@ -108,6 +137,7 @@ header {
 main {
     margin-top: 6vh;
     z-index: 10;
+    text-align: center;
 }
 
 .play-btn {
@@ -312,19 +342,28 @@ main {
 /* ===== FOOTER ===== */
 footer {
     font-size: 0.9rem;
-    opacity: 0.6;
+    opacity: 0.8;
     z-index: 10;
     color: #ffb3b3;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 0;
+    width: 100%;
 }
 
 @media (max-width: 1024px) {
     .unit-sticker,
-    .noob-sticker {
+    .noob-sticker,
+    .aron-sticker {
         top: 55%;
     }
 
     .unit-sticker img,
-    .noob-sticker img {
+    .noob-sticker img,
+    .aron-sticker img {
         max-height: 70vh;
     }
 }
@@ -381,14 +420,10 @@ footer {
         order: -1;
     }
 
-    .unit-sticker,
-    .noob-sticker {
-        display: none;
-    }
-
     .unit-sticker img,
-    .noob-sticker img {
-        max-height: 55vh;
+    .noob-sticker img,
+    .aron-sticker img {
+        max-height: 35vh;
     }
 }
 
@@ -406,17 +441,44 @@ footer {
         font-size: 0.95rem;
     }
 
-    .unit-sticker img,
-    .noob-sticker img {
-        max-height: 45vh;
-    }
-
     .play-btn {
         padding: 14px 30px;
         font-size: 1.1rem;
     }
+
+    .unit-sticker img,
+    .noob-sticker img,
+    .aron-sticker img {
+        max-height: 25vh;
+    }
 }
 
+
+/* Force stickers to remain fixed in the viewport */
+.unit-sticker,
+.noob-sticker,
+.aron-sticker {
+    position: fixed !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    pointer-events: none !important;
+}
+
+.unit-sticker {
+    right: 6% !important;
+    left: auto !important;
+}
+
+.noob-sticker {
+    left: 6% !important;
+    right: auto !important;
+}
+
+.aron-sticker {
+    right: 12% !important;
+    left: auto !important;
+    top: 40% !important;
+}
 
 
 /* ===== GAME SHOWCASE ===== */
@@ -462,10 +524,14 @@ footer {
 
 .vg-game-card img {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    max-height: 180px;
+    height: auto;
+    object-fit: contain;
     border-radius: 12px;
     margin-bottom: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .vg-game-card h3 {
@@ -498,12 +564,13 @@ footer {
 }
 
 .aron-img {
-    width: 160px;     
+    width: 160px;
     height: auto;
     border-radius: 12px;
     display: block;
-    margin: 0 auto;      /* centers it */
-    box-shadow: 0 0 18px rgba(219, 56, 56, 0.35);
+    margin: 0 auto;
+    border: none;
+    box-shadow: none;
 }
 
 
