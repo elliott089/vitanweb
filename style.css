@@ -420,10 +420,16 @@ footer {
         order: -1;
     }
 
+    .unit-sticker,
+    .noob-sticker,
+    .aron-sticker {
+        top: 12px !important;
+    }
+
     .unit-sticker img,
     .noob-sticker img,
     .aron-sticker img {
-        max-height: 35vh;
+        max-height: 25vh;
     }
 }
 
@@ -446,10 +452,16 @@ footer {
         font-size: 1.1rem;
     }
 
+    .unit-sticker,
+    .noob-sticker,
+    .aron-sticker {
+        top: 10px !important;
+    }
+
     .unit-sticker img,
     .noob-sticker img,
     .aron-sticker img {
-        max-height: 25vh;
+        max-height: 15vh;
     }
 }
 
@@ -572,5 +584,6 @@ footer {
     border: none;
     box-shadow: none;
 }
+
 
 
